@@ -8,12 +8,12 @@ export default {
     path.join(__dirname,'/client/index.js')
   ],
   output:{
-    path: __dirname,
+    path: '/',
     filename : 'bundle.js',
     publicPath : '/'
   },
   plugins:[
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
